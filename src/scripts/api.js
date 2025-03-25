@@ -6,6 +6,8 @@ const api = VITE_APIURL;
 // User
 export const apiSignUp = (data) => axios.post(`${api}/api/user/signUp`, data);
 export const apiSignIn = (data) => axios.post(`${api}/api/user/signIn`, data);
+export const apiForgetPassword = (data) => axios.post(`${api}/api/forget-password`, data);
+export const apiResetPassword = (data) => axios.post(`${api}/api/reset-password`, data);
 export const apiGetUserPublicProfile = (id) => axios.get(`${api}/api/user/${id}/profile`);
 export const apiGetMyProfile = () => axios.get(`${api}/api/user/profile`);
 export const apiUpdateProfile = (data) => axios.patch(`${api}/api/user/profile`, data);
