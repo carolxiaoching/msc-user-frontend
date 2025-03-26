@@ -308,7 +308,7 @@ async function getRecipes() {
 
     closeLoading();
   } catch (err) {
-    message.pushMessage({
+    pushMessage({
       style: 'danger',
       title: '取得食譜列表失敗',
       text: err.response?.data?.message || '請重整網頁再試一次',
