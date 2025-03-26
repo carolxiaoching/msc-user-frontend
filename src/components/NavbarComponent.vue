@@ -161,7 +161,8 @@ function signOut() {
 function scrolling() {
   scrollTop.value = window.scrollY;
   const bodyTag = document.querySelector('body');
-  if (scrollTop.value > 0) {
+
+  if (scrollTop.value > 60) {
     bodyTag.classList.add('fixedNav');
   } else {
     bodyTag.classList.remove('fixedNav');

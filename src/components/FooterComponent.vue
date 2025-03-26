@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-11 bg-light text-muted">
+  <footer class="py-16 bg-light text-muted">
     <ul
       class="container list-unstyled d-flex flex-column flex-lg-row align-items-center align-items-lg-start mb-11 mb-lg-16"
     >
