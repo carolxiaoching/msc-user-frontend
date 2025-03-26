@@ -112,11 +112,11 @@ const timeline = ref([
     year: 2026,
     events: [
       {
-        month: '2月',
+        month: 2,
         description: '被列入「年度最佳社群平台」推薦榜單，並榮獲「優質用戶體驗設計獎。」',
       },
       {
-        month: '8月',
+        month: 8,
         description: '與知名美食媒體合作，推出「家傳味道系列」，鼓勵更多人分享家族傳承的料理故事。',
       },
     ],
