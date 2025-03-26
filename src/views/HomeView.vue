@@ -122,7 +122,7 @@
           <div class="d-flex flex-wrap justify-content-center">
             <router-link
               class="categoryBadge d-block mx-8 mx-md-14 mx-lg-8 mx-xl-14 mb-8"
-              :to="`/recipes?category=${category.title}`"
+              :to="`/recipes?category=${category._id}`"
               v-for="category in categories.slice(0, 6)"
               :key="category._id"
             >
