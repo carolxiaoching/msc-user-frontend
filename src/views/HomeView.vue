@@ -145,7 +145,7 @@
               class="tagBadge d-block mx-4 mx-xxl-10 my-8 px-8 px-xxl-14 py-4 py-xxl-8 rounded-2 fw-semibold"
               v-for="tag in tags.slice(0, 9)"
               :key="tag._id"
-              :to="`/recipes?tags=[${tag}]`"
+              :to="`/recipes?tag=${tag._id}`"
             >
               # {{ tag.title }}
             </router-link>

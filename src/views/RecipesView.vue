@@ -195,14 +195,14 @@ watch(
         await getTagsAndCategories();
       }
 
-      const { keyword, category } = route.query;
+      const { keyword, category, tag } = route.query;
 
-      if (keyword || category) {
+      if (keyword || category || tag) {
         filter.value = {
           sort: 'desc',
           category: category || '全部',
           keyword: keyword || '',
-          tags: [],
+          tags: tag ? [`${tag}`] : [],
           page: 1,
         };
       }
@@ -268,6 +268,12 @@ function setCategory(category) {
 
 // 切換標籤
 function toggleTag(tag) {
+  const query = route.query;
+  if (query.tag) {
+    filter.value.tags = [];
+    router.replace('/recipes');
+  }
+
   // 限制最大選擇的標籤數量為 3
   const filterTags = filter.value.tags || [];
   if (filterTags.length >= 3 && !filterTags.includes(tag)) {
