@@ -12,6 +12,7 @@
 
 .homeBannerImg {
   display: flex;
+  justify-content: center;
   align-items: flex-end;
   position: absolute;
   top: 0;
@@ -29,7 +30,7 @@
 }
 
 .homeBannerText {
-  width: 100%;
+  max-width: 90%;
   margin: 1rem;
   padding: 1rem;
   background: rgba($light, 0.8);
