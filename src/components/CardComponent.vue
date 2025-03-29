@@ -7,7 +7,7 @@
       <div class="cardCover d-block rounded-2 overflow-hidden">
         <img
           v-lazy="recipe.coverImgUrl"
-          class="cardImage w-100 h-100 object-fit-cover placeholder"
+          class="cardImage w-100 h-100 object-fit-cover"
           :alt="recipe.title"
         />
       </div>
