@@ -40,7 +40,7 @@
           <div :style="`background-image: url(${item.coverImgUrl});`" class="homeBannerImg">
             <div class="homeBannerText">
               <h2 class="mb-4 h4">{{ item.title }}</h2>
-              <p>{{ item.description }}</p>
+              <p class="w-75 mx-auto text-truncate">{{ item.description }}</p>
             </div>
           </div>
         </router-link>
