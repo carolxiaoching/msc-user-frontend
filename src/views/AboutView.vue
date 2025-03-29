@@ -12,7 +12,7 @@
     </div>
 
     <div class="d-none d-xl-block col-5 mb-16">
-      <img src="../assets/images/about-born.webp" class="w-100 h-100 rounded-2 object-fit-cover" />
+      <img v-lazy="aboutBornImg" class="w-100 h-100 rounded-2 object-fit-cover" />
     </div>
     <div class="col-12 col-xl-7 mb-16">
       <div class="aboutBorn backgroundCover h-100 p-8 p-md-14 p-xl-0 rounded-2">
@@ -43,10 +43,7 @@
     </div>
 
     <div class="d-none d-xl-block col-5 mb-18">
-      <img
-        src="../assets/images/about-vision.webp"
-        class="w-100 h-100 rounded-2 object-fit-cover"
-      />
+      <img v-lazy="aboutVisionImg" class="w-100 h-100 rounded-2 object-fit-cover" />
     </div>
 
     <div class="col-12 mb-16">
@@ -88,6 +85,8 @@
 
 <script setup>
 import { ref } from 'vue';
+import aboutBornImg from '@/assets/images/about-born.webp';
+import aboutVisionImg from '@/assets/images/about-vision.webp';
 
 const timeline = ref([
   {

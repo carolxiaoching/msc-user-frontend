@@ -55,7 +55,7 @@
     </div>
   </section>
   <section class="position-relative mt-24 mt-md-25 mb-22 mb-md-25">
-    <img src="../assets/images/icon/feature-bg.svg" class="featureBg d-none d-md-block z-n1" />
+    <img v-lazy="featureBgImg" class="featureBg d-none d-md-block z-n1" />
     <div class="container text-center">
       <h2 class="mb-12 h3">我的秘密食譜，發現美味的秘密！</h2>
       <p class="featureSubtitle textLs mx-auto mb-18 mb-md-22 text-muted">
@@ -63,7 +63,7 @@
       </p>
       <ul class="row gy-17 mb-0 list-unstyled">
         <li class="col-12 col-sm-6 col-lg-3" v-for="featureItem in feature" :key="feature.title">
-          <img :src="featureItem.img" :alt="featureItem.title" class="featureImg mb-8" />
+          <img v-lazy="featureItem.img" :alt="featureItem.title" class="featureImg mb-8" />
           <p class="mb-8 fs-6 fw-medium">{{ featureItem.title }}</p>
           <p class="featureContent textLs mx-auto text-muted">{{ featureItem.content }}</p>
         </li>
@@ -71,10 +71,7 @@
     </div>
   </section>
   <section class="position-relative mb-22 mb-md-25">
-    <img
-      src="../assets/images/icon/recipes-section-bg.svg"
-      class="recipesSectionBg d-none d-md-block z-n1"
-    />
+    <img v-lazy="recipesSectionBgImg" class="recipesSectionBg d-none d-md-block z-n1" />
     <div class="container">
       <div class="d-flex justify-content-between align-items-end mb-11">
         <h2 class="title justify-content-start">
@@ -108,10 +105,7 @@
   </section>
 
   <section class="position-relative mb-22 mb-md-25">
-    <img
-      src="../assets/images/icon/category-tag-section-bg.svg"
-      class="categoryTagBg d-none d-md-block z-n1"
-    />
+    <img v-lazy="categoryTagSectionBgImg" class="categoryTagBg d-none d-md-block z-n1" />
     <div class="container text-center">
       <h2 class="h3 mb-12">尋找靈感？從分類與標籤開始！</h2>
       <p class="categoriesSubtitle textLs mx-auto mb-18 mb-md-22 text-muted">
@@ -128,7 +122,7 @@
             >
               <div class="categoryBadgeImage p-8 rounded-4">
                 <img
-                  :src="category.categoryImgUrl"
+                  v-lazy="category.categoryImgUrl"
                   :alt="category.title"
                   class="categoryBadgeIcon"
                 />
@@ -236,6 +230,10 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
+import featureBgImg from '@/assets/images/icon/feature-bg.svg';
+import recipesSectionBgImg from '@/assets/images/icon/recipes-section-bg.svg';
+import categoryTagSectionBgImg from '@/assets/images/icon/category-tag-section-bg.svg';
 
 import featureImg1 from '@/assets/images/icon/feature-img1.webp';
 import featureImg2 from '@/assets/images/icon/feature-img2.webp';

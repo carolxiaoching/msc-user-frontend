@@ -57,7 +57,7 @@
               aria-expanded="false"
             >
               <img
-                :src="myProfile.avatarImgUrl"
+                v-lazy="myProfile.avatarImgUrl"
                 alt="avatar"
                 class="dropdownBtnImg d-block bg-white rounded-circle object-fit-cover text-center text-white fs-4"
                 v-if="myProfile.avatarImgUrl"
