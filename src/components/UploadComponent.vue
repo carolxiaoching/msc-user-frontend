@@ -18,7 +18,7 @@
         <i class="bi bi-x"></i>
       </a>
       <div
-        class="previewImage backgound-cover rounded-3"
+        class="previewImage backgoundCover rounded-3"
         :style="{ backgroundImage: `url(${previewImageUrl})` }"
       ></div>
     </div>
