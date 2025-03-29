@@ -18,6 +18,8 @@ export default defineConfig({
   },
   base: process.env.NODE_ENV === 'production' ? '/msc-user-frontend/' : '',
   build: {
+    // 解決部屬後找不到 _plugin-vue_export-helper 問題
+    // 來源： https://israynotarray.com/other/20220928/1377668819/
     rollupOptions: {
       output: {
         // https://github.com/rollup/rollup/blob/master/src/utils/sanitizeFileName.ts
