@@ -186,7 +186,7 @@
         </span>
         <span> 更多料理選擇 </span>
       </h2>
-      <div class="row row-cols-1 row-cols-md-3 mb-11" v-if="recipes.length">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 gy-14 mb-11" v-if="recipes.length">
         <div class="col" v-for="item in recipes.slice(0, 3)" :key="item._id">
           <CardComponent
             :recipe="item"
